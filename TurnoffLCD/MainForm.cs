@@ -56,7 +56,7 @@ namespace CloseLCD
             // Test if the About item was selected from the system menu
             if ((m.Msg == WM_SYSCOMMAND) && ((int)m.WParam == SYSMENU_ABOUT_ID))
             {
-                MessageBox.Show(this, "此程序可在桌面及文件夹右键菜单中加入[关闭显示器]菜单项。\r\n\r\n作者：楚人无衣（刘景威）\r\n版本：" + Application.ProductVersion, "关于...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(this, "此程序可在桌面及文件夹右键菜单中加入[关闭显示器]菜单项。\r\n\r\n作者：楚人无衣（刘景威）\r\n版本：" + Application.ProductVersion + "\r\n主页：http://www.cr-soft.net", "关于...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         #endregion
