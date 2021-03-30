@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("楚人显示器关闭工具")]
-[assembly: AssemblyDescription("可以在桌面及文件夹右键菜单中加入[关闭显示器]菜单项")]
+[assembly: AssemblyDescription("可以在桌面右键菜单中加入[关闭显示器]菜单项")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CR-Soft")]
 [assembly: AssemblyProduct("CR TurnoffLCD")]
-[assembly: AssemblyCopyright("© CR-Soft 2019")]
+[assembly: AssemblyCopyright("© CR-Soft 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // 可以指定所有这些值，也可以使用“内部版本号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.4")]
-[assembly: AssemblyFileVersion("1.0.0.4")]
+[assembly: AssemblyVersion("1.0.0.5")]
+[assembly: AssemblyFileVersion("1.0.0.5")]

@@ -56,7 +56,7 @@ namespace CloseLCD
             // Test if the About item was selected from the system menu
             if ((m.Msg == WM_SYSCOMMAND) && ((int)m.WParam == SYSMENU_ABOUT_ID))
             {
-                MessageBox.Show(this, "此程序可在桌面及文件夹右键菜单中加入[关闭显示器]菜单项。\r\n\r\n作者：楚人无衣（刘景威）\r\n版本：" + Application.ProductVersion + "\r\n主页：http://www.cr-soft.net", "关于...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(this, "此程序可在桌面右键菜单中加入[关闭显示器]菜单项。\r\n\r\n作者：楚人无衣（刘景威）\r\n版本：" + Application.ProductVersion + "\r\n主页：http://www.cr-soft.net", "关于...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         #endregion
@@ -88,7 +88,7 @@ namespace CloseLCD
 
         private bool MenuItemExists()
         {
-            var path = Registry.GetValue(@"HKEY_CLASSES_ROOT\Directory\Background\shell\TurnoffMonitor\command", "", "");
+            var path = Registry.GetValue(@"HKEY_CLASSES_ROOT\DesktopBackground\shell\TurnoffMonitor\command", "", "");
             if (path == null)
                 return false;
             return File.Exists(path.ToString().Replace("\"", "").Replace(" -silent", ""));
@@ -98,7 +98,7 @@ namespace CloseLCD
         {
             try
             {
-                var key = Registry.ClassesRoot.CreateSubKey(@"Directory\Background\shell\TurnoffMonitor");
+                var key = Registry.ClassesRoot.CreateSubKey(@"DesktopBackground\shell\TurnoffMonitor");
                 if (key != null)
                 {
                     string text = !string.IsNullOrEmpty(txtMenuText.Text) ? txtMenuText.Text : "关闭显示器(&M)";
@@ -150,7 +150,7 @@ namespace CloseLCD
             {
                 try
                 {
-                    using (var key = Registry.ClassesRoot.OpenSubKey(@"Directory\Background\shell\TurnoffMonitor", true))
+                    using (var key = Registry.ClassesRoot.OpenSubKey(@"DesktopBackground\shell\TurnoffMonitor", true))
                     {
                         if (key != null)
                             key.DeleteSubKeyTree("");
